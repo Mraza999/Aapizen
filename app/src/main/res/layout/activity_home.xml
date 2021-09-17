@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+
+    <TextView
+        android:id="@+id/HomeHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="HOME"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+
+        />
+
+    <TextView
+        android:id="@+id/displayAtHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="150sp"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:padding="10sp"
+
+        android:textColor="@color/Wet_1"
+        android:textAlignment="center"
+
+        />
+
+    <Button
+        android:id="@+id/logout_Btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/HomeHeading"
+
+        android:layout_marginStart="290sp"
+        android:layout_marginTop="170sp"
+
+        android:text="@string/logout_btn"
+        android:textColor="@color/white"
+        android:background="@drawable/ripple_logout"
+
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="app_name">AAPIZEN</string>
+    <string name="AppN">AAPIZEN</string>
+    <string name="HintUserN">Full Name</string>
+    <string name="HintPass">Password</string>
+    <string name="HintEmail">Email</string>
+
+
+    <string name="String_checkbox">I Agree all Terms and Services</string>
+    <string name="login_btn">Login</string>
+    <string name="signup_btn">SignUp</string>
+
+
+    <string name="ForgotPass">Forgot Password?</string>
+    <string name="Do_not_have_acc">Don\'t have an account?</string>
+    <string name="F_name">First Name</string>
+    <string name="L_name">Last Name</string>
+
+    <string name="MaleR_btn">Male</string>
+    <string name="FemaleR_btn">Female</string>
+    <string name="Heading1">Let\'s Get Started!</string>
+    <string name="Sign_Up_btn">Sign Up</string>
+    <string name="already_have_an_acc">Already have an account?</string>
+    <string name="forget_npassword">FORGET\nPASSWORD</string>
+    <string name="heading2">FORGET\nPASSWORD</string>
+    <string name="ForgetP_detail">Provide your account\'s mail for which you want\nto reset your password!</string>
+    <string name="Next">NEXT</string>
+    <string name="logout_btn">logout</string>
+
+</resources>

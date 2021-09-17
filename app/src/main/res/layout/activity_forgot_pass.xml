@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgotPass_activity"
+
+    android:background="#FFFFFF">
+
+
+    <ImageView
+        android:id="@+id/img_ForgotPass"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="0sp"
+        android:scaleType="fitXY"
+        android:src="@drawable/image_log2"
+
+        />
+
+    <TextView
+        android:id="@+id/Forget_Pass"
+        android:layout_below="@+id/img_ForgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textAlignment="center"
+        android:text="@string/heading2"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/Wet_0"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <TextView
+        android:id="@+id/ForgetP_detail"
+        android:layout_below="@id/Forget_Pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+
+        android:textAlignment="center"
+        android:text="@string/ForgetP_detail"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/Wet_0"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+    <EditText
+        android:id="@+id/ForgetP_mail"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+
+        android:layout_below="@+id/ForgetP_detail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+
+        android:background="@drawable/round_login"
+        android:backgroundTint="@color/Wet_0"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="16sp"
+        android:hint="@string/HintEmail"
+
+        android:padding="19sp"
+        android:paddingStart="25sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/half_white" />
+
+    <Button
+        android:id="@+id/ForgetP_btn"
+        android:layout_width="130sp"
+        android:layout_height="50sp"
+
+        android:layout_below="@+id/ForgetP_mail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+
+        android:background="@drawable/ripple_logout"
+        android:backgroundTint="@color/blue_0"
+        android:text="@string/Next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        android:textStyle="bold"
+
+
+        />
+
+</RelativeLayout>
+
+
+
+
+
