@@ -38,21 +38,25 @@ class SignUp_activity : AppCompatActivity() {
             val dataLname: String = LastN.text.toString()
             val dataEmail: String = Email.text.toString()
             val dataPass:  String = Password.text.toString()
-            val dataRadioM: String = radioBtnMale.text.toString()
-            val dataRadioF: String = radioBtnFemale.text.toString()
+            val dataRepass: String = RePassword.text.toString()
 
 
 
 
             // FIRSTNAME VALIDATION
-            if (dataFname.isNotEmpty()) {
-                if (dataFname.length <= 8) {
-                } else {
+            if (dataFname.isNotEmpty())
+            {
+                if (dataFname.length <= 8)
+                {
+
+                }
+                else {
                     FirstN.error = "First Name length must be less than or equal 8"
                     return@setOnClickListener
                 }
 
-            } else {
+            }
+            else {
                 FirstN.error = "First Name can't be empty"
                 return@setOnClickListener
             }
@@ -83,7 +87,9 @@ class SignUp_activity : AppCompatActivity() {
                     Email.error="Email is invalid!"
                     return@setOnClickListener
                 }
-            }else {
+            }
+            else
+            {
                 Email.error = "Email field can't be empty!"
                 return@setOnClickListener
             }
@@ -110,13 +116,45 @@ class SignUp_activity : AppCompatActivity() {
             }
 
 
+
+            // REPASSWORD VALIDATION
+            if (dataRepass.isNotEmpty())
+            {
+                if(dataRepass == dataPass)
+                {
+
+                }
+                else
+                {
+                    RePassword.error="Password must be same"
+                    return@setOnClickListener
+                }
+            }
+            else
+            {
+                RePassword.error="Confirm Password field can't be empty!"
+                return@setOnClickListener
+            }
+
+
             // RADIO BUTTON VALIDATION
             if (radioBtnMale.isChecked() || radioBtnFemale.isChecked())
             {
 
             }
             else{
-                Toast.makeText(this, "Plz choose gender", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Please choose gender", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
+            // CHECKBOX VALIDATION
+            if(CheckBox_id.isChecked)
+            {
+
+            }
+            else
+            {
+                Toast.makeText(this, "Please agree all terms and services", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 

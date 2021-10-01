@@ -27,5 +27,6 @@
     <string name="ForgetP_detail">Provide your account\'s mail for which you want\nto reset your password!</string>
     <string name="Next">NEXT</string>
     <string name="logout_btn">logout</string>
+    <string name="confirm_pass">Confirm Password</string>
 
 </resources>

@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp_activity">
-
+    tools:context=".SignUp_activity"
+    android:background="@color/white">
 
 
     <ImageView
         android:id="@+id/img_signUp"
-        android:layout_width="350sp"
-        android:layout_height="200sp"
+        android:layout_width="373dp"
+        android:layout_height="183dp"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginTop="20sp"
-        android:src="@drawable/image_log3" />
+        android:layout_marginTop="32dp"
+        android:src="@drawable/image_log3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/heading1"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
         android:layout_below="@+id/img_signUp"
-        android:layout_marginTop="10sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
 
         android:text="@string/Heading1"
+        android:textColor="@color/blue_1"
         android:textSize="35sp"
+
         android:textStyle="bold"
-        android:textColor="@color/SlateBlue_1"
-
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_signUp" />
 
     <EditText
         android:id="@+id/FirstN"
-        android:layout_width="150sp"
+        android:layout_width="150dp"
         android:layout_height="45sp"
         android:layout_below="@id/img_signUp"
-        android:layout_marginStart="40sp"
 
-        android:layout_marginTop="80sp"
+        android:paddingStart="5sp"
+        android:paddingEnd="10sp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/round_signup"
         android:backgroundTint="@color/Wet_0"
 
@@ -50,113 +57,156 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/half_white"
-
-        />
-
+        app:layout_constraintStart_toStartOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/heading1" />
 
     <EditText
         android:id="@+id/LastN"
         android:layout_width="150sp"
         android:layout_height="45sp"
         android:layout_below="@id/img_signUp"
-        android:layout_marginStart="210sp"
 
-        android:layout_marginTop="80sp"
+        android:paddingStart="5sp"
+        android:paddingEnd="10sp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/round_signup"
-        android:backgroundTint="@color/Wet_0"
 
+        android:backgroundTint="@color/Wet_0"
         android:hint="@string/L_name"
         android:inputType="text"
-        android:maxLines="1"
 
+        android:maxLines="1"
         android:textAlignment="center"
         android:textColor="@color/white"
+
         android:textColorHint="@color/half_white"
-
-        />
-
+        app:layout_constraintEnd_toEndOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/heading1" />
 
     <EditText
         android:id="@+id/Email"
         android:layout_width="320sp"
         android:layout_height="45sp"
         android:layout_below="@id/LastN"
-        android:layout_marginStart="40sp"
-
-        android:layout_marginTop="25sp"
-        android:background="@drawable/round_signup"
-        android:backgroundTint="@color/Wet_0"
-
-        android:hint="@string/HintEmail"
-        android:inputType="text"
-        android:maxLines="1"
 
         android:paddingStart="25sp"
+        android:paddingEnd="15sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_signup"
+
+        android:backgroundTint="@color/Wet_0"
+        android:hint="@string/HintEmail"
+        android:inputType="textEmailAddress"
+
+        android:maxLines="1"
         android:textColor="@color/white"
+
         android:textColorHint="@color/half_white"
-
-        />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstN" />
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="320sp"
         android:layout_height="45sp"
         android:layout_below="@id/Email"
-        android:layout_marginStart="40sp"
-
-        android:layout_marginTop="25sp"
-        android:background="@drawable/round_signup"
-        android:backgroundTint="@color/Wet_0"
-
-        android:hint="@string/HintPass"
-        android:inputType="text"
-        android:maxLines="1"
 
         android:paddingStart="25sp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/half_white"
+        android:paddingEnd="15sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_signup"
 
-        />
+        android:backgroundTint="@color/Wet_0"
+        android:hint="@string/HintPass"
+        android:inputType="textPassword"
+
+        android:maxLines="1"
+        android:textColor="@color/white"
+
+        android:textColorHint="@color/half_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <EditText
+        android:id="@+id/RePassword"
+        android:layout_width="320sp"
+        android:layout_height="45sp"
+        android:layout_below="@id/Email"
+
+        android:paddingStart="25sp"
+        android:paddingEnd="15sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_signup"
+
+        android:backgroundTint="@color/Wet_0"
+        android:hint="@string/confirm_pass"
+        android:inputType="textPassword"
+
+        android:maxLines="1"
+        android:textColor="@color/white"
+
+        android:textColorHint="@color/half_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <RadioGroup
         android:id="@+id/RadioGroup"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Password">
+        android:layout_below="@+id/Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RePassword">
 
         <RadioButton
             android:id="@+id/radioBtnMale"
-            android:layout_marginTop="20sp"
-
-            android:layout_marginStart="100sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="@string/MaleR_btn"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:layout_marginStart="100sp"
+            android:layout_marginTop="10sp"
+
             android:buttonTint="@color/Wet_1"
-            />
+            android:text="@string/MaleR_btn"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
         <RadioButton
             android:id="@+id/radioBtnFemale"
-            android:layout_marginTop="-32sp"
-
-            android:layout_marginStart="200sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-32sp"
 
-            android:text="@string/FemaleR_btn"
-            android:textSize="18sp"
-            android:textStyle="bold"
             android:buttonTint="@color/Wet_1"
-            />
+            android:text="@string/FemaleR_btn"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
     </RadioGroup>
 
+
+    <CheckBox
+        android:id="@+id/CheckBox_id"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+
+        android:layout_marginTop="16dp"
+        android:buttonTint="@color/teal_700"
+        android:padding="5sp"
+
+        android:text="@string/String_checkbox"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup" />
 
     <Button
         android:id="@+id/SignUp_btn"
@@ -165,17 +215,18 @@
 
         android:layout_below="@id/RadioGroup"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25sp"
 
+        android:layout_marginTop="8dp"
         android:background="@drawable/ripple_signup"
+
         android:text="@string/Sign_Up_btn"
         android:textColor="@color/white"
 
         android:textSize="15sp"
         android:textStyle="bold"
-
-        />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CheckBox_id" />
 
     <Button
         android:id="@+id/login_link"
@@ -183,18 +234,21 @@
         android:layout_height="20dp"
 
         android:layout_below="@id/SignUp_btn"
-        android:layout_marginStart="250sp"
-        android:layout_marginTop="20sp"
 
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/ripple_signup"
+
         android:backgroundTint="@color/Wet_1"
         android:text="@string/login_btn"
-        android:textColor="@color/white"
 
+        android:textColor="@color/white"
         android:textSize="11sp"
         android:textStyle="bold"
-
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Don_t_have_account"
+        app:layout_constraintTop_toBottomOf="@+id/SignUp_btn" />
 
     <TextView
         android:id="@+id/Don_t_have_account"
@@ -202,11 +256,14 @@
         android:layout_height="wrap_content"
 
         android:layout_below="@id/SignUp_btn"
-        android:layout_marginStart="80sp"
-        android:layout_marginTop="20dp"
 
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
         android:text="@string/already_have_an_acc"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUp_btn" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
 

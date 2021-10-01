@@ -10,7 +10,10 @@
 
     <color name="half_white">#C0C0C0</color>
 
-    <color name="blue_0">#2E86C1</color>
+    <color name="blue_0">#89AADF</color>
+    <color name="blue_1">#605CA8</color>
+    <color name="blue_2">#121A41</color>
+
 
     <color name="Wet_0">#5D6D7E</color>
     <color name="Wet_1">#2E4053</color>

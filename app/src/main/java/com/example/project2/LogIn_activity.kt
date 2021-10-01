@@ -80,16 +80,6 @@ class LogIn_activity : AppCompatActivity() {
             }
 
 
-        // CHECKBOX VALIDATION
-            if(CheckBox_id.isChecked)
-            {
-
-            }
-            else
-            {
-                Toast.makeText(this, "Plz agree all terms and services", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
 
             val i = Intent(this,Home::class.java)
 
@@ -108,7 +98,7 @@ class LogIn_activity : AppCompatActivity() {
 
     private fun Validate_Username(): Boolean
     {
-        return UserN_In.length() > 5 && UserN_In.length() <= 15
+        return UserN_In.length() >= 5 && UserN_In.length() <= 15
 
     }
 
